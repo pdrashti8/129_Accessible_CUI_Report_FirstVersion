@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web Engineering Seminar in SummerSemester 2023 - Accessibility for Conversational User Interfaces</title>
+  <link rel="stylesheet" type="text/css" href="main.css"/>
+  <link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+    <header>
+        <h2>Web Engineering Seminar in SummerSemester 2023</h2>
+		<h1>Accessibility for Conversational User Interfaces</h1>
+        <h2 class="author">Drashti Patel, Braian Alexis Salas Arriaga</h2>
+		<h3 class="affiliation">
+			Professur Verteilte und Selbstorganisierende Rechnersysteme<br/>
+			Technische Universität Chemnitz<br/>
+			Chemnitz, Deutschland
+		</h3>
+    </header>
+
+    <!-- Section 1 -->
+    <section>
+    	<h2>1. Introduction to Conversational User Interfaces (CUIs)</h2>
+        <p><i>Edited by Braian Salas</i></p>
+
+        <p> 
+            The term “CUI” or “Conversational User Interfaces” refers to a diverse group of assistants such as chatbots and voice-activated assistants that intend to mimic human conversation to fulfill a user's request. 
+            These, enable users with accessibility needs further possibilities to perform a task by providing the request via text or interpreting human speech and answering back by using a synthesized voice <a href="#r5">[5]</a>. 
+            However, as these types of interfaces are somehow recent, little research exists on how these can be more accessible to those in need to use them. 
+            Even though a CUI shows to be flexible and convenient, implementing accessibility guidelines plays a big role in fully considering them as a way to improve users with disability's everyday life just as much as what is considered to be a common user. 
+            This report aims to present what types of conversational user interfaces exist, what role plays accessibility, and guidelines, and how to tackle the challenge of correctly implementing these standards.
+    	</p>
+	</section>
+    
+    <!-- Section 2 -->
+    <section>
+    	<h2>2. Types of CUIs in The Market and its Use </h2>
+        <p><i>Edited by Braian Salas</i></p>
+
+        <p> 
+            CUI can be separated into the following 4 distinctive groups: IVRs, Virtual Assistants VAPA, and Chatbots. 
+            Each is distinguished by its particular way of interacting with users <a href="#r1">[1]</a>. 
+        </p>
+        <p>
+            IVR or Interactive Voice Response Systems are widely used by companies to handle large volumes of client requests performed via phone. 
+            The user interacts with these through a series of pre-recorded responses that are mimicking a human customer service agent to handle this large call volume. 
+            However, IVRs are limited as they only count with specific response options and pre-recorded audios. 
+            A user calling an internet provider to get information on services they provide and packages is a good example of what IVRs are currently applied to <a href="#r1">[1]</a>. 
+
+        </p>
+        <p>
+            Virtual Assistants are generally embedded into smartphones and by interacting with other services, can handle diverse requests such as generating appointments or obtaining a weather forecast. 
+            VAs share the natural language and conversation with chatbots, another type of CUI. 
+            Amongst the most popular virtual assistants,  Siri by Apple and Cortana by Microsoft are some of the most popular ones <a href="#r1">[1]</a>.  
+        </p>
+        <p>
+            VAPA also known as Voice Activated Personal Assistants is perhaps the most popular conversational user interface. 
+            These, just like virtual assistants, interact with existing applications to fulfill a user's request. 
+            To interact with them, a dedicated piece of hardware is used. 
+            VAPAs are commonly invoked by a word or sometimes a phrase and then proceed to process the user's request and are widely utilized to interact with fellow smart devices. 
+            Amongst the most popular ones, Alexa by Amazon is one of the most widely accepted by users all over the world <a href="#r1">[1]</a>.
+        </p>
+        <p>
+            Chatbots, as mentioned before, make use of natural language to approach users. 
+            Nowadays, both text and spoken dialogue are used when interacting with them. 
+            Entertainment, therapy, and customer service are just some of the peak fields where they are being used <a href="#r1">[1]</a>.
+        </p>
+        
+	</section>
+
+    <!-- Section 3 -->
+    <section>
+    	<h2>3. Difference between a GUI and CUI</h2>
+        <p><i>Edited by Braian Salas</i></p>
+
+        <p> 
+            A graphic user interface widely known as “GUI” is the most common type of interface known by everyone. 
+            As its name states, the users interact with this interface through the use of graphics. 
+            What we know nowadays and what we have been interacting with ever since are considered to be graphic user interfaces. 
+            On the other hand, a conversational user interface does not necessarily need to implement a GUI. 
+            Their main source of interaction is text-based or even speech-based. Depending on the type of CUI, a GUI might work hand-in-hand to deliver the proper user experience aimed for such as when a chatbot is the case of use. 
+            It is then important, not only to think about accessibility on the graphical level, meaning what the eye can perceive but also what is not visible to the user. 
+            By combining both GUI and CUI, the user experience broadens and gets even more robust and efficient <a href="#r4">[4]</a>. 
+        </p>
+	</section>
+
+    <!-- Section 4 -->
+    <section>
+    	<h2>4. Categories of Disability</h2>
+        <p><i>Edited by Braian Salas</i></p>
+
+        <p> 
+            To talk about accessibility, it is also important to know a bit about disabilities. 
+            There is no one size fits all disabilities, as there is no such thing as just one type of disability and it can also vary from user to user. 
+            One user with a visual impairment might not have the same struggles another user has.  Leading to perhaps, different individual experiences. 
+            The research performed, lead to a total of 9 groups of disability as follows <a href="#r1">[1]</a>: 
+        </p>
+        
+        <p> 
+            <ol>
+                <li>Deaf or hearing impairment</li>
+                <li>Visual impairment</li>
+                <li>Mobility/dexterity impairment</li>
+                <li>Mental health</li>
+                <li>Cognitive and learning disabilities</li>
+                <li>Autism spectrum conditions</li>
+                <li>Long-term fatigue, pain, or health conditions</li>
+                <li>Speech impairment</li>
+                <li>Dyslexia and learning difficulties</li>
+              </ol>
+        </p>
+
+        <p> 
+            However, specific standard guidelines might have a different categorization to fit better with their specifications.
+        </p>
+	</section>
+
+    <!-- Section 5 -->
+    <section>
+    	<h2>5. Challenges in Conversational User Interfaces</h2>
+        <p><i>Edited by Braian Salas</i></p>
+
+        <p> 
+            Now known that conversational user interfaces do not fit one specific mold, here are some of the challenges found when developing accessible ones: 
+        </p>
+        <h3>5.1. Timeouts</h3>
+        <p> 
+            A regular user might not take so much time to answer, 
+            but it has to be taken into consideration that maybe a disabled user might not be able to complete the same action within the same timeframe. 
+            Correct timeout calculations should be done <a href="#r11">[11]</a>. 
+        </p>
+        <h3>5.2. Focus Disruption</h3>
+        <p> 
+            While reading a previous message response, 
+            a user might get disrupted if prompted with another message. 
+            Warnings should be, when possible, displayed to the user <a href="#r11">[11]</a>.
+        </p>
+        <h3>5.3. Typos</h3>
+        <p> 
+            Conversational user interfaces make use of natural language to interact with a user. 
+            It should at least be able to handle typos coming from the user. These are a struggle for chatbots, 
+            as they have not figured out how to keep the conversation going if typos exist <a href="#r11">[11]</a>.
+        </p>
+        <h3>5.4. Access to Buttons</h3>
+        <p> 
+            How easy is it really to access the CUI? 
+            Does a user need to click several buttons to start a conversation? Does the CUI make use of unfocusable elements? Or does it provide answers in the form of a fancy non-interactable way? 
+            These are all questions that should be asked before considering a CUI as accessible <a href="#r11">[11]</a>.
+        </p>
+	</section>
+
+    <!-- Section 6 -->
+    <section>
+        <h2>6. Generalizing Conversational User Interface Accessibility</h2>
+        <p><i>Edited by Drashti Patel</i></p>
+
+        <p> 
+            Accessibility ensures that everyone, irrespective of their abilities or disabilities, 
+            can access and leverage the advantage of the digital world. 
+            It's about creating an opportunity for all types of users. 
+            Key features that one can consider for making any Conversational user interface accessible. 
+        </p>
+        <p> 
+            Primarily, the user interface should be interactive. 
+            Ensuring everyone can engage in the conversation and accomplish their desired task effectively  <a href="#r1">[1]</a>. 
+            Then as users can engage seamlessly, the interface should be such that it is easily understood and a person can navigate through the content without any confusion  <a href="#r1">[1]</a><a href="#r9">[9]</a>.  
+        </p>
+        <p> 
+            The conversational user interface should be multimodal. 
+            When any human communication occurs, it doesn't happen only verbally but includes body language, visual language, and music. 
+            There are various forms of expressing oneself without words <a href="#r4">[4]</a>. So similarly, 
+            the user interface should be such that interaction can happen with voice, touch, or typing on a keyboard. 
+            Users can choose the mode that suits them best. 
+        </p>
+        <p> 
+            Security is a priority for any user, especially when suffering from some disability. 
+            It can be a threat if confidential information gets disclosed. Another essential factor is customizable <a href="#r1">[1]</a>. 
+            Interfaces should offer possibilities to users, for instance, choosing language preference, color contrast, font style, and many more. 
+            All these will benefit users to some extent, regardless of their disability.
+        </p>
+    </section>
+
+    <!-- Section 7 -->
+    <section>
+        <h2>7. Improving Web Accessibility</h2>
+        <p><i>Edited by Drashti Patel</i></p>
+
+        <p> 
+            Acknowledging the rights of people with disabilities, developing accessible web content is necessary. 
+            It has come up that web developers lack a proper culture for implementing accessible web content. 
+            There were some tests conducted, and most of them were disappointing. 
+            According to the previous WebAIM report on the topmost one million pages, 96.8% of web pages failed during Web Content Accessibility Guidelines (WCAG) tests <a href="#r3">[3]</a>. 
+        </p>
+        <p> 
+            For analyzing this inconsistency, there was one questionnaire distributed among web developers. 
+            Out of all, 94.3% of participants knew about the accessibility concept, 
+            and 69% declared incorporating accessibility skills as chief or very important <a href="#r3">[3]</a>. 
+        </p>
+        <figure>
+            <img src="01.png" width="500" height="350" alt="Answer to the question “Do you think having accessibility skills is...”"/>
+            <figcaption>
+              <strong>Figure 1</strong>: Answer to the question “Do you think having accessibility skills is...” <a href="#r3">[3]</a>.
+            </figcaption>
+        </figure>
+        <p> 
+            During the second phase of the survey, an assessment regarding participant knowledge in creating web content that is accessible got tested. 
+            For this, 15.09% of them declared are experts, and less than 2% had a high level of expertise in developing accessible Conversational User Interfaces <a href="#r3">[3]</a>.  
+        </p>
+        <figure>
+            <img src="02.png" width="500" height="350" alt="Answer to the question “How much expertise do you have about accessibility?”"/>
+            <figcaption>
+              <strong>Figure 2</strong>: Answer to the question “How much expertise do you have about accessibility?” <a href="#r3">[3]</a>.
+            </figcaption>
+        </figure>
+        <p> 
+            Therefore, developers believe in having accessibility skills foremost. But most of them lack those capabilities. 
+            Lack of awareness about accessibility among developers is the vital reason for considerable failures in passing WCAG tests <a href="#r3">[3]</a>.
+        </p>
+    </section>
+    
+    <!-- Section 8 -->
+    <section>
+        <h2>8. W3C Accessibility Guidelines and Rules</h2>
+        <p><i>Edited by Drashti Patel</i></p>
+
+        <p>
+            To make the User interface accessible several standard guidelines provide necessary accessibility guidance for designing Conversational User Interfaces. 
+            Like Web Content Accessibility Guidelines (WCAG), Accessible Rich Internet Applications (ARIA), Operating System Accessibility Guidelines, and others. 
+            The most widely followed and approved guidelines for accessible CUIs are the Web Content Accessibility Guidelines. 
+            WCAG provides comprehensive recommendations for making web content accessible to people with disabilities. 
+        </p>
+        <p>
+            WCAG applicability of general guidance is arranged in four main principles, each with an associated guide and success criteria <a href="#r1">[1]</a>. 
+            The first principle emphasizes the importance of making content perceivable to all users. 
+            Put forward the content in a manner that can be perceptible through various senses, such as vision, hearing, or touch.
+        </p>
+        <p>
+            Then the operability principle focuses on making web content and user interface components operable by all individuals <a href="#r1">[1]</a>. 
+            It explains that users should be able to navigate, interact, and use the interface without any barriers.
+        </p>
+        <p>
+            The understandable principle highlights the significance of making web content and user interfaces effortlessly comprehensive <a href="#r1">[1]</a>. 
+            Ensuring understandability, we enable users to comprehend and utilize digital content without frustration. 
+            Lastly, the Robust principle mentions the importance of creating web content compatible with different technologies and devices.
+        </p>
+        <p>  
+            “WCAG 3.0 is a successor to Web Content Accessibility Guidelines 2.2 [WCAG22] and previous versions but does not deprecate WCAG 2. X” <a href="#r2">[2]</a>. 
+            The WCAG  addresses a broad set of user needs, uses innovative approaches to test, and helps to keep up guidelines with ever-evolving technology. 
+            Here, there are six guideline examples showing different features of WCAG 3.0.
+        </p>
+
+        <h3>8.1 Text Alternative</h3>
+        <p>
+            This guideline highlights the importance of offering text alternatives for non-text content <a href="#r2">[2]</a>. 
+            Could be done by providing descriptive text, such as alt text for images and video transcripts. 
+            Individuals incapable of perceiving images or multimedia can still comprehend the content. 
+            It enables users with visual impairments to effectively engage with the content. 
+            Also, these are categories that can benefit from implementing this guideline: 
+            vision & visual impairment, language & literacy, learning, memory, and mental health impairment <a href="#r2">[2]</a>. 
+        </p>
+
+        <h3>8.2 Clear Words</h3>
+        <p>
+            The second guideline determines the significance of using clear and straightforward language <a href="#r2">[2]</a>. 
+            Employing plain language can benefit diverse groups, including those with cognitive disabilities or language barriers. 
+            Avoiding jargon, complex terms, and convoluted sentences, can enhance the understandability of the content for everyone. The following cognitive functional categories can extraordinarily benefit from implementing this guideline: 
+            attention, language & literacy, learning, memory, executive, and mental health <a href="#r2">[2]</a>.
+        </p>
+
+        <h3>8.3 Captions</h3>
+        <p>
+            This guideline emphasizes the significance of providing captions for audio and video content <a href="#r2">[2]</a>. 
+            Captions play a crucial role in benefiting individuals who are deaf or hard of hearing, allowing them to comprehend the information presented. Additionally, 
+            captions are valuable in environments where one can not play sound, enabling users to access content without relying solely on auditory cues.
+        </p>
+        <p>
+            By including accurate captions synchronizing with the audio, developers can ensure that everyone, regardless of hearing abilities or environmental limitations, 
+            can access and understand the information conveyed through multimedia content. 
+            This inclusive approach promotes equal access to audio and video content, 
+            fostering a more inclusive digital experience for all users.
+        </p>
+        <p>
+            Implementing this guideline is particularly beneficial for various functional categories, including sensory - hearing & auditory, sensory intersections, 
+            cognitive - language & literacy, and cognitive & sensory intersections <a href="#r2">[2]</a>. These categories encompass individuals having specific sensory needs or cognitive challenges related to language processing and literacy. 
+            By providing captions, developers can cater to their needs and enable them to engage effectively with multimedia content.
+        </p>
+
+        <h3>8.4 Structured Content</h3>
+        <p>
+            This guideline highlights the vital role of structuring content in a direct and organized manner. 
+            It promotes the use of appropriate heading structures, lists, 
+            and other structural elements to enhance the overall readability and navigability of the content <a href="#r2">[2]</a>.
+        </p>
+        <p>
+            With proper content structuring and following a hierarchical approach, 
+            the user interface facilitates easy navigation and comprehension for individuals who rely on screen readers or other assistive technologies. 
+            It will ensure that users with visual impairments or other disabilities can effectively access and understand the information presented.
+        </p>
+        <p>
+            Applying this guideline will yield significant benefits for various functional categories, 
+            including sensory problems like physical & sensory intersections. Further, cognitive issues such as attention, 
+            language & literacy, memory, and executive also benefit from well-structured content <a href="#r2">[2]</a>.
+        </p>
+        <p>
+            By incorporating appropriate heading structures and organizing content effectively, it provides an inclusive user experience, 
+            accommodating the needs of diverse users and improving overall accessibility.
+        </p>
+
+        <h3>8.5 Visual Contrast</h3>
+        <p>
+            The fifth guideline underscores the importance of sufficient color contrast between text and its background <a href="#r2">[2]</a>. 
+            It acknowledges that individuals with visual impairments, including those with color blindness, rely on adequate color contrast to read the content.
+        </p>
+        <p>
+            By ensuring a suitable contrast ratio, developers can enhance the legibility and accessibility of the text for all users. 
+            This guideline encourages designers and developers to consider the Advanced Perceptual Contrast Algorithm (APCA), 
+            a modern method of computing contrast based on up-to-date research on color perception.
+        </p>
+        <p>
+            Implementing this guideline benefits individuals in the sensory vision & visual impairment categories <a href="#r2">[2]</a>. 
+            By prioritizing appropriate color contrast, 
+            it creates an inclusive digital environment that accommodates users with visual impairments, enabling them to access and comprehend textual content more easily.
+        </p>
+
+        <h3>8.6 Error Prevention</h3>
+        <p>
+            The sixth and final guideline focuses on error prevention in user input. 
+            It underlines the significance of using clear error messages and providing suggestions for correction to prevent users from making mistakes <a href="#r2">[2]</a>. 
+            By implementing user-friendly forms and interfaces, such as giving instructions for a date or email format beforehand, 
+            designers could ensure a smoother and more intuitive experience for all individuals.
+        </p>
+        <p>
+            Implementing this guideline is particularly beneficial for various functional categories. 
+            It includes sensory issues like vision & visual, 
+            sensory intersections, cognitive issues like attention, language & literacy, learning, memory, executive, and mental health <a href="#r2">[2]</a>. 
+            By incorporating error prevention strategies, such a user interface will reduce user frustration, improve usability, 
+            and enhance accessibility for individuals with different sensory & cognitive disabilities <a href="#r2">[2]</a>. 
+            It elevates user independence and enables a more inclusive and error-free interaction with the digital content or application.
+        </p>
+    </section>
+
+    <!-- Section 9 -->
+    <section>
+        <h2>9. ARIA</h2>
+        <p><i>Edited by Braian Salas</i></p>
+
+        <p> 
+            As previously mentioned, the Accessible Rich Internet Applications (ARIA) standard guideline is considered one of the most common practices to approach accessibility. 
+            Intended as a framework, the WAI-ARIA provides aid to improve both accessibility and interoperability. The standard <a href="#r12">[12]</a>.
+        </p>
+        <p> 
+            <a href="https://www.w3.org/WAI/">The WAI Group</a> formally defines ARIA as “a way to make web content and web applications more accessible to people with disabilities” <a href="#r16">[16]</a>. 
+            A set of attributes that describe roles, states, and properties is how ARIA works. Such attributes are then communicated to assistive technologies or ATs such as screen readers or text-to-speech software. 
+            Together with the accessibility tree generated by the browser and based on the document object model or DOM, is how the standard can further create an amplified experience for those using assistive technologies. 
+            It is not about visual appearance, but about what the users with disabilities can experience through an ARIA-enhanced digital product <a href="#r16">[16]</a>.
+        </p>
+        <p> 
+            The first feature of the guideline is the “roles”, 
+            intended to be the way to communicate to the AT what an element is or does on the web application. 
+            To tell the screen read that what it is on the screen is for example a button and not something else. 
+            Following, the properties establish relationships between objects and/or further describe an element's characteristics. 
+            So what does the button do? Does it open a new window? Adds an element to the basket? That is what a property can describe for instance. 
+            Finally, how can an AT tell if the button is pressed or not? The third feature is statuses. Current conditions and values from an element can be communicated through these attributes <a href="#r16">[16]</a>.
+        </p>
+        <p> 
+            Necessarily, accessibility is already not there. At times, less is more, and even for others, none is better. 
+            Improper implementation of such guidelines can lead to even greater confusion and mean a bigger struggle for AT users. 
+            That is why, it is important to first ask oneself: When should ARIA be used? 
+            This is a question that has been answered by the WAI-Group and their following five rules <a href="#r16">[16]</a>. 
+        </p>
+
+        <h3>9.1 Five Rules of ARIA</h3>
+        <p> 
+            The first rule of ARIA: Do not use ARIA. 
+            As mentioned before, sometimes none is better. 
+            Several native HTML elements already carry the built-in behavior to interact correctly with the TA. 
+            So, if it already works, why make things harder <a href="#r16">[16]</a>?
+        </p>
+        <p> 
+            The second rule of ARIA: Don't add unnecessary ARIA. 
+            Using the HTML elements as intended is better than trying to change their semantics of them <a href="#r16">[16]</a>.
+        </p>
+        <p> 
+            Third rule of ARIA: Always support keyboard navigation. 
+            It's simple, everything must be keyboard accessible. 
+            Remember that some users use the keyboard to reach each & every element on a website, 
+            and take into consideration that when incorrectly implemented, 
+            an element might take longer to reach than another because of incorrect use of tab indexes <a href="#r16">[16]</a>.
+        </p>
+        <p> 
+            The fourth rule of ARIA: Don't hide focusable elements. If an element is important, why hide it? 
+            Properties such as “aria-hidden” or assigning incorrect roles to elements can make the user not able to discover such elements or 
+            not understand what is present at all <a href="#r16">[16]</a>.
+        </p>
+        <p> 
+            The fifth rule of ARIA: Use accessible names. 
+            A user must be able to recognize what element they are trying to interact with. 
+            Through accessible labels, this can be achieved <a href="#r16">[16]</a>.
+        </p>
+    </section>
+
+   <!-- Section 10 -->
+    <section>
+        <h2>10. Demonstration</h2>
+
+        <h3>10.1 By following WCAG guidelines</h3>
+        <p><i>Edited by Drashti Patel</i></p>
+
+        <p> 
+            In this demonstration, an application prototype is designed by following WCAG guidelines to make it accessible. 
+            This is a grocery shopping application <a href="https://www.figma.com/proto/xivBSAqJFkISdS9DoqDYL9/shopQuik?type=design&node-id=42-444&scaling=scale-down&page-id=42%3A436&starting-point-node-id=42%3A444&mode=design">shopQuick</a> which can help users with disabilities to place an order without using any complex featured application. 
+        </p>
+
+        <div class="row" >
+            <div class="column">
+                <figure>
+                    <img src="03.png" alt="Customizing Background "/>
+                    <figcaption>
+                      <strong>Figure 3</strong>: Customizing Background.
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="column">
+                <figure>
+                    <img src="04.png" alt="Decision Screen"/>
+                    <figcaption>
+                      <strong>Figure 4</strong>: Decision Screen.
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="column">
+                <figure>
+                    <img src="05.png" alt="Chat Screen"/>
+                    <figcaption>
+                      <strong>Figure 5</strong>: Chat Screen.
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+       
+        <p> 
+            Looking at <b>Figure 3</b>, you will see options for users to set their application background per their preference. 
+            People with autism spectrum conditions can benefit from this feature. 
+            Avoiding bright colors and using pastel shade colors is helpful for them, also avoiding colors like white and yellow <a href="#r1">[1]</a>. 
+            By using intuitive icons and buttons, a user can seamlessly understand the purpose of an application. An example is in <b>Figure 4</b>.
+        </p>
+        
+        <p> 
+            Text messages from chatbots are kept short and simple in language to understand, which you can see in <b>Figure 5</b>. 
+            Keeping the text simple, avoiding serif fonts, and forbidding Bolds and Italics makes it more readable <a href="#r1">[1]</a>. 
+            In this, we have incorporated a slow request and response timer for each message from the chatbot end, 
+            which will be helpful for people having mental health issues or anxiety <a href="#r1">[1]</a>.
+        </p>
+        <p> 
+            Using specific sizes, colors, fonts, and some types of icons helps users to navigate smoothly through the application. 
+            Like a back arrow and send message icons in <b>Figure 5</b>. We have designed the conversation in a fashion that users do not need to scroll. 
+            Users with mobility impairments don't need to burden themselves with keeping track of the conversation with the chatbot <a href="#r1">[1]</a>.
+        </p>
+
+
+        <h3>10.2 By following ARIA guidelines</h3>
+        <p><i>Edited by Braian Salas</i></p>
+
+        <p>
+            A live approach served as an illustration for the second portion of the demonstration. 
+            As previously mentioned, the ARIA standard guidelines do not play a significant role in what is visible to the user but in what a UT user interacts with. 
+            The main idea was to display incorrect misuse of ARIA attributes in existing conversational user interfaces, specifically in "Chatbot" CUI's. 
+            As a result of research on current chatbot agents, Vodafone's "TOBi" was chosen <a href="#r19">[19]</a>. 
+        </p>
+        <p>
+            "TOBi" is the name of Vodafone's current chatbot customer service agent <a href="#r19">[19]</a>. 
+            It is capable of answering general demands that a new or existing customer might have, such as information on new or existing services, phone bill payment, etc. 
+            In general, TOBi works fine for a user with no disability. 
+            However, this is not the same for someone who uses a screen reader to interact with it. 
+            Apple's accessibility tools were used to simulate how this type of user might interact. German and English TOBI versions were used, 
+            as one chatbot version displays a higher level of accessibility than the other. 
+        </p>
+
+        <figure>
+            <img src="06.png" alt="Vodafone's TOBi England chatbot"/>
+            <figcaption>
+              <strong>Figure 6</strong>: Vodafone's TOBi England chatbot <a href="#r19">[19]</a>.
+            </figcaption>
+        </figure>
+
+        <p>
+            A few examples of ARIA misuse were found after going through the chatbot's code. Both versions use ARIA features, one to a higher extent than the other, but it didn't mean higher accessibility as they were not working correctly. 
+        </p>
+        <p>
+            1. New notification announcement was in both enabled. Only England's version was working, however. 
+        </p>
+        <p>
+            2. Tab indexing was a bit of a struggle. Key elements were, at times, not focusable. As a result, text responses were not always readable. 
+        </p>
+        <p>
+            3. Accessible names were barely or not present at all in the web applications.
+        </p>
+        <p>
+            4. England's version connects the user with a live agent if the conversation goes nowhere, unlike the German version.
+        </p>
+    </section>
+
+    <!-- Section 11 -->
+    <section>
+        <h2>11. Conclusion</h2>
+        <p><i>Edited by Drashti Patel</i></p>
+        <p> 
+            Concluding that it's very crucial to develop any web application or digital content by following standard authorized guidelines. 
+            By which it can be accessible to a large group of people, including people with disabilities. 
+            There are some websites from where one can check for accessibility scores, get suggestions, 
+            and even many standardized tests designed to rate the accessibility of the application. 
+            A few out of many websites are <a href="https://wave.webaim.org/extension/">Wave</a> and <a href="https://web.math.unipd.it/accessibility-dev/">MyWcag4All</a> <a href="#r3">[3]</a>.
+        </p>
+        <p> 
+            One type of feature or implementation would not address all categories of disability, 
+            but covering most of them by considering standard rules is a sustainable step toward developing an Accessible Conversational User Interface. 
+        </p>
+
+        <p><i>Edited by Braian Salas</i></p> 
+        <p>
+            Accessible conversational user interfaces represent an enormous opportunity to fill the gap between what is considered to be online accessibility. 
+            A chance for the not so commonly taken into consideration users to finally be heard and minimize their struggle to achieve what another user should be able to do. 
+            Developing for accessibility is not a one-person task, but an overall group task where not only programmers are involved, but also designers, executives, and testers <a href="#r11">[11]</a>. 
+            And to enable accessibility is to understand that more means improvement, better experiences, and not necessarily greater complexity. 
+        </p>
+    </section>
+
+    <!-- References Section -->
+	<section class="references">
+	   		<h2>12. References</h2>
+            <p class="reference" id="r1">[1] K. Lister, T. Coughlan, F. Iniesto, N. Freear, P. Devine, “Accessible conversational user interfaces: considerations for design” in Web4All 2020, Taipei, Taiwan, 2020. <a href="https://dl.acm.org/doi/10.1145/3371300.3383343">https://dl.acm.org/doi/10.1145/3371300.3383343</a> (27.04.2023)</p>
+    		<p class="reference" id="r2">[2] J. Spellman, R. B. Montgomery, S. Lauriat, M. Cooper, “W3C Accessibility Guidelines (WCAG) 3.0”, [Online], Available: <a href="https://www.w3.org/TR/wcag-3.0/">https://www.w3.org/TR/wcag-3.0/</a> (27.04.2023)</p>
+    		<p class="reference" id="r3">[3] O. Gaggi, L. Perinello, “Improving accessibility of web accessibility rules” in Conference on Information Technology for Social Good (GoodIT'22), New York, 2022. <a href="https://dl.acm.org/doi/fullHtml/10.1145/3524458.3547267">https://dl.acm.org/doi/fullHtml/10.1145/3524458.3547267</a> (27.04.2023)</p>
+            <p class="reference" id="r4">[4] S. Schaffer, N.Reithinger, “Conversation is multimodal: thus conversational user interfaces should be as well” in Conference on Conversational User Interfaces, Dublin, Ireland, 2019. <a href="https://dl.acm.org/doi/10.1145/3342775.3342801">https://dl.acm.org/doi/10.1145/3342775.3342801</a> (11.05.2023)</p>
+            <p class="reference" id="r5">[5] F. Iniesto, T. Coughlan, K. Lister, P. Devine, N. Freear, R. Greenwood, W. Holmes, I. Kenny, K. McLeod, R. Tudor, “Creating a Simple Conversation’: Designing a Conversational User Interface to Improve the Experience of Accessing Support for Study” in ACM Transactions on Accessible Computing, 2023. <a href="https://dl.acm.org/doi/10.1145/3568166">https://dl.acm.org/doi/10.1145/3568166</a> (11.05.2023)</p>
+            <p class="reference" id="r6">[6]  K. Shinohara, J. O. Wobbrock, W. Pratt, “Incorporating Social Factors in Accessible Design” in ASSETS, Ireland, 2018. <a href="https://dl.acm.org/doi/10.1145/3234695.3236346">https://dl.acm.org/doi/10.1145/3234695.3236346</a> (18.05.2023)</p>
+            <p class="reference" id="r7">[7]  L. Hutter, H. M. Lawrence, “Promoting inclusive and accessible design in usability testing: a teaching case with users who are deaf”, in Communication Design Quarterly, 2018. <a href="https://dl.acm.org/doi/10.1145/3282665.3282668">https://dl.acm.org/doi/10.1145/3282665.3282668</a> (18.05.2023)</p>
+            <p class="reference" id="r8">[8]  V. Melnyk, “Accessible web chat interface” in International ACM SIGACCESS Conference on Computers and Accessibility, New York, United States, 2014. <a href="https://dl.acm.org/doi/10.1145/2661334.2661415">https://dl.acm.org/doi/10.1145/2661334.2661415</a> (18.05.2023)</p>
+            <p class="reference" id="r9">[9]  “Understanding accessibility”, [Online], Available: <a href="https://m2.material.io/design/usability/accessibility.html#hierarchy">https://m2.material.io/design/usability/accessibility.html#hierarchy</a> (27.04.2023)</p>
+            <p class="reference" id="r10">[10]  A. Glasser, V. Mande, M. Huenerfauth, “Accessibility for Deaf and Hard of Hearing Users: Sign Language Conversational User Interfaces” in Conference on Conversational User Interfaces, Bilbao, Spain, 2020. <a href="https://dl.acm.org/doi/10.1145/3405755.3406158">https://dl.acm.org/doi/10.1145/3405755.3406158</a> (25.05.2023)</p>
+            <p class="reference" id="r11">[11] A. Abbas, T. Bostic, R. T. Brink, J. Kruse, G. Lofaro, R. Scollan, J. Stanley, A. Valiton, J. Wittich. (2021). Chatbot Accessibility Playbook [Online]. Available: <a href="https://mitre.github.io/chatbot-accessibility-playbook/front_matter.pdf">https://mitre.github.io/chatbot-accessibility-playbook/front_matter.pdf</a> (05.06.2023)</p>
+            <p class="reference" id="r12">[12] J. Nurthen, M. Cooper, S. L. Henry.(2022, May. 19). WAI-ARIA Overview [Online]. Available: <a href="https://www.w3.org/WAI/standards-guidelines/aria/">https://www.w3.org/WAI/standards-guidelines/aria/</a> (06.06.2023)</p>
+            <p class="reference" id="r13">[13] G. Tonye. (2021, Sep.). “Designing Accessible Chatbots: An Introduction” [Online]. Available: <a href="https://medium.com/voice-tech-global/designing-accessible-chatbots-an-introduction-332cead237d4">https://medium.com/voice-tech-global/designing-accessible-chatbots-an-introduction-332cead237d4</a> (05.06.2023)</p>
+            <p class="reference" id="r14">[14] Icons. Available: <a href="https://www.flaticon.com/">https://www.flaticon.com/</a> (07.06.2023)</p>
+            <p class="reference" id="r15">[15] J. Diggs, J. Nurthen, M. Cooper, C. MacLeod, “Accessible Rich Internet Applications (WAI-ARIA) 1.2,” [Online], 06 June 2023. Available: <a href="https://www.w3.org/TR/wai-aria/#introduction">https://www.w3.org/TR/wai-aria/#introduction</a> (05.06.2023)</p>
+            <p class="reference" id="r16">[16] “ARIA and HTML” [Online]. Available: <a href="https://web.dev/learn/accessibility/aria-html/">https://web.dev/learn/accessibility/aria-html/</a> (05.06.2023)</p>
+            <p class="reference" id="r17">[17] L. Zawadzki. (2016, Dec).“Conversational UI Principles — Complete Process of Designing a Website Chatbot” [Online]. Available: <a href="https://medium.com/swlh/conversational-ui-principles-complete-process-of-designing-a-website-chatbot-d0c2a5fee376">https://medium.com/swlh/conversational-ui-principles-complete-process-of-designing-a-website-chatbot-d0c2a5fee376</a></p>
+            <p class="reference" id="r18">[18] Giphy. Available: <a href="https://giphy.com/">https://giphy.com/</a> (03.05.2023)</p>
+            <p class="reference" id="r19">[19] “How to contact us” [Online]. Available: <a href="https://www.vodafone.co.uk/contact-us/">https://www.vodafone.co.uk/contact-us/</a> (01.06.2023)</p>
+            <p class="reference" id="r20">[20] “So erreichst Du die Vodafone Kunden-Hotline” [Online]. Available: <a href="https://www.vodafone.de/hilfe/kundenservice.html?mtlscops=true">https://www.vodafone.de/hilfe/kundenservice.html?mtlscops=true</a> (01.06.2023)</p>
+      
+	</section>
+</body>
+</html>
